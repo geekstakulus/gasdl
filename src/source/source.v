@@ -32,7 +32,7 @@ pub fn new(text string) Source {
 // advance moves to the next character in the text, updating the current character,
 // line, and column information accordingly.
 pub fn (mut s Source) advance() {
-    if s.current_char == `\n` {
+    if s.current_char == `\n` || s.current_char == `\r` {
         s.line++
         s.column = 1
     } else {
