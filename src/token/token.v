@@ -4,6 +4,8 @@ import source
 
 // TokenKind represents the different kinds of tokens based on the EBNF grammar.
 pub enum TokenKind as u8 {
+    invalid
+
     // Keywords
     @module
     attributes
@@ -42,7 +44,7 @@ const (
     delimiter_beg = TokenKind.lbrack
     delimiter_end = TokenKind.eq
     tokens = [
-        'module', 'attributes',
+        'Invalid', 'module', 'attributes',
         '[', ']', '<', '>', '(', ')', '{', '}', ',', '*', '.', '?', '|', '=', 'EOF',
         'Type Identifier', 'Constructor Identifier'
     ]
