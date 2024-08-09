@@ -125,7 +125,7 @@ fn test_whitespace() {
     s.advance()
     assert s.current_token() == token.Token{
         kind: .asterisk
-        pos: source.Position{line: 3, column: 1}
+        pos: source.Position{line: 2, column: 1}
         lexeme: "*"
     }
 }
